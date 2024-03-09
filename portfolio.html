@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+
+    <title>Juragat's Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@900&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="home">
+        <div class="navWrap">
+            <nav>
+                <div class="navTag">Hello</div>
+                <div class="navRes">
+                    <a class="wid" href="#home">Home</a>
+                    <a href="#about-wrap">About</a>
+                    <a href="#services-wrap">Services</a>
+                    <a href="#projects-wrap">Projects</a>
+                    <a href="#contact-wrap">Contact</a>
+                </div>
+                <button class="navBtn" onclick="hideShow()">BTN</button>
+            </nav>
+        </div>
+        <div class="intro ">
+            <div class="text">
+                <div class="handler"></div>
+                <h1 class="h1-1st fade">Hi I'm Juragat</h1>
+                <h1 class="h1-2nd swap">Frontend dev</h1>
+                <h1 class="h1-3nd swap">Backend dev</h1>
+                <p class="grnTxt">A tech guy that can help you with anything</p>
+            </div>
+            <div class="photo fade"></div>
+        </div>
+    </header>
+    <main>
+        <div class="mainWrap flex-col">
+            <div class="about-wrap" id="about-wrap">
+                <div class="about">
+                    <h2 class="fade">About Me</h2>
+                    <p class="fade2">Hey there, thanks for visiting my web page, my full name is Arman Juragat and I'm
+                        21 years old!
+                        I'm a data science student at MUST which is based in Mongolia and I loved writing code ever
+                        since I
+                        discovered
+                        what it was
+                        besides the school I gained a lots of technical skills trough working on personal projects and
+                        you
+                        can check them out below!</p>
+                </div>
+            </div>
+            <div class="services-wrap flex-col" id="services-wrap">
+                <div class="services flex-col" id="services">
+                    <div class="services-head fade flex-col">
+                        <h2>Services</h2>
+                        <p>Here are the list of services that I offer!</p>
+                    </div>
+                    <div class="boxSer fade">
+                        <div class="boxSerChld fade2">
+                            <h3>Data analysis</h3>
+                            <p>It includes data cleaning, exploratory analysis, descriptive analysis, diagnostic
+                                analysis,
+                                predictive analysis, prescriptive analysis and data vizualizations
+                                </br>I use excel and python for the initial cleaning and analyzing stages and use
+                                tableau
+                                for
+                                interactive data vizualizations </p>
+                        </div>
+                        <div class="boxSerChld fade2">
+                            <h3>Ml and Deep learning</h3>
+                            <p>It includes ...</p>
+                        </div>
+                        <div class="boxSerChld fade2">
+                            <h3>Web development</h3>
+                            <p>It includes Landing pages, E-commercial websites, Business web pages
+                                </br>I use Vim and Bootstrap mainly for frontend development and MERN for full stack
+                                development
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-wrap" id="projects-wrap">
+                <div class="projects">
+                    <div class="pros-head fade">
+                        <h2>Projects</h2>
+                    </div>
+                    <div class="pros-main fade2">
+                        <a class="project" href="facebook.com"></a>
+                        <a class="project" href=""></a>
+                        <a class="project" href=""></a>
+                        <a class="project" href=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-wrap" id="contact-wrap">
+                <h2 class="fade">Contact ME</h2>
+                <div class="contact">
+                    <form class="form fade2 flex-col">
+                        <div class="form-div">
+                            <div class="flex-row">
+                                <h3>Instant message</h3>
+                            </div>
+                            <input type="input" placeholder="Full name">
+                            <input type="input" placeholder="Email">
+                            <input type="input" placeholder="Subject">
+                            <textarea placeholder="Message" style="height: 15vh;"></textarea>
+                            <button class="btn">Submit</button>
+                        </div>
+                    </form>
+                    <div class="form2 flex-row fade2">
+                        <a>FB</a>
+                        <a>Ins</a>
+                        <a>Tw</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><span class="grnTxt">&copy; 2023 Juragat </span>| All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
