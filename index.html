@@ -13,47 +13,136 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@900&family=Roboto&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Notable&family=Rubik+Mono+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <header id="home">
         <div class="navWrap">
             <nav>
-                <div class="navTag">Hello</div>
+                <div class="navTag">HelloWorld</div>
                 <div class="navRes">
                     <a class="wid" href="#home">Home</a>
                     <a href="#about-wrap">About</a>
                     <a href="#services-wrap">Services</a>
-                    <a href="#projects-wrap">Projects</a>
+                    <!-- <a href="#projects-wrap">Projects</a> -->
                     <a href="#contact-wrap">Contact</a>
                 </div>
-                <button class="navBtn" onclick="hideShow()">BTN</button>
+                <button class="navBtn" onclick="hideShow()"><img class="nav_btn" src="nav_btn.jpeg"></button>
             </nav>
         </div>
         <div class="intro ">
-            <div class="text">
+            <div class="text fade">
                 <div class="handler"></div>
-                <h1 class="h1-1st fade">Hi I'm Juragat</h1>
+                <h1 class="h1-1st">Hi I'm Juragat</h1>
                 <h1 class="h1-2nd swap">Frontend dev</h1>
                 <h1 class="h1-3nd swap">Backend dev</h1>
-                <p class="grnTxt">A tech guy that can help you with anything</p>
+                <div class="txtBot">
+                    <p class="grnTxt">A web guy that can help you with anything</p>
+                    <a href="#contact-wrap" class="a"><button class="txtBtn">Hire me?</button></a>
+                </div>
             </div>
-            <div class="photo fade"></div>
+            <div class="photo">
+                <div class="back"></div>
+                <div class="front">
+                    <div class="fr" style="--t: 10s">
+                        <div class="fr-wrap">
+                            <div class="fr1">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                                <span>Tailwind</span>
+                                <span>React</span>
+                                <span>Vue</span>
+                            </div>
+                            <div class="fr1-2">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                                <span>Tailwind</span>
+                                <span>React</span>
+                                <span>Vue</span>
+                            </div>
+                        </div>
+                        <div class="fr-wrap">
+                            <div class="fr2">
+                                <span>Node.js</span>
+                                <span>Laravel</span>
+                                <span>Asp.NET</span>
+                                <span>MongoDb</span>
+                                <span>MySQL</span>
+                                <span>APIs</span>
+                            </div>
+                            <div class="fr2-2">
+                                <span>Node.js</span>
+                                <span>Laravel</span>
+                                <span>Asp.NET</span>
+                                <span>MongoDb</span>
+                                <span>MySQL</span>
+                                <span>APIs</span>
+                            </div>
+                        </div>
+                        <div class="fr3">
+                            <h3>Art of code</h3>
+                        </div>
+                        <div class="fr-wrap">
+                            <div class="fr1">
+                                <span>Believe</span>
+                                <span>Learn</span>
+                                <span>Observe</span>
+                                <span>Endure</span>
+                                <span>Trust</span>
+                                <span>Aspire</span>
+                            </div>
+                            <div class="fr1-2">
+                                <span>Believe</span>
+                                <span>Learn</span>
+                                <span>Observe</span>
+                                <span>Endure</span>
+                                <span>Trust</span>
+                                <span>Aspire</span>
+                            </div>
+                        </div>
+                        <div class="fr-wrap">
+                            <div class="fr2">
+                                <span>Imagination</span>
+                                <span>Precision</span>
+                                <span>Curiosity</span>
+                                <span>Ambition</span>
+                                <span>Passion</span>
+                                <span>Creativity</span>
+                            </div>
+                            <div class="fr2-2">
+                                <span>Imagination</span>
+                                <span>Precision</span>
+                                <span>Curiosity</span>
+                                <span>Ambition</span>
+                                <span>Passion</span>
+                                <span>Creativity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         </div>
     </header>
     <main>
         <div class="mainWrap flex-col">
-            <div class="about-wrap" id="about-wrap">
-                <div class="about">
-                    <h2 class="fade">About Me</h2>
-                    <p class="fade2">Hey there, thanks for visiting my web page, my full name is Arman Juragat and I'm
+            <div class="about-wrap fade" id="about-wrap">
+                <div class="about fade2">
+                    <h2>About Me</h2>
+                    <p>Hey there, thanks for visiting my web page, my full name is Arman Juragat and I'm
                         21 years old!
-                        I'm a data science student at MUST which is based in Mongolia and I loved writing code ever
+                        I'm an IT student at MUST which is based in Mongolia and I loved writing code ever
                         since I
                         discovered
-                        what it was
+                        what it was,
                         besides the school I gained a lots of technical skills trough working on personal projects and
                         you
                         can check them out below!</p>
@@ -62,35 +151,35 @@
             <div class="services-wrap flex-col" id="services-wrap">
                 <div class="services flex-col" id="services">
                     <div class="services-head fade flex-col">
-                        <h2>Services</h2>
-                        <p>Here are the list of services that I offer!</p>
+                        <h3>Here are the list of services that I offer!</h3>
                     </div>
                     <div class="boxSer fade">
-                        <div class="boxSerChld fade2">
-                            <h3>Data analysis</h3>
-                            <p>It includes data cleaning, exploratory analysis, descriptive analysis, diagnostic
-                                analysis,
-                                predictive analysis, prescriptive analysis and data vizualizations
-                                </br>I use excel and python for the initial cleaning and analyzing stages and use
-                                tableau
-                                for
-                                interactive data vizualizations </p>
+                        <div class="boxSerChld">
+                            <h3>Frontend</h3>
+                            <p>It includes UI/UX design, landing pages, static and dynamic pages,
+                                responsive pages,
+                                I'm experienced in HTML, CSS and JS and use tools and frameworks such as Bootstrap,
+                                Tailwind, React, Vue </p>
                         </div>
-                        <div class="boxSerChld fade2">
-                            <h3>Ml and Deep learning</h3>
-                            <p>It includes ...</p>
+                        <div class="boxSerChld">
+                            <h3>Backend</h3>
+                            <p>It includes storing and retrieving data, user request processing, CRUD operations
+                                I mainly use Laravel, ASP.NET Core and Node.js for operations and when it comes to
+                                databases I use MySQL and MongoDB for strong reliable backend services</p>
                         </div>
-                        <div class="boxSerChld fade2">
-                            <h3>Web development</h3>
-                            <p>It includes Landing pages, E-commercial websites, Business web pages
-                                </br>I use Vim and Bootstrap mainly for frontend development and MERN for full stack
-                                development
+                        <div class="boxSerChld">
+                            <h3>Full-stack and APIs</h3>
+                            <p>I use MERN for full stack development,
+                                but based on client's requests I could use broader tools such as Laravel in order to
+                                provide efficient and secure backend service and Inertia for connecting it with modern
+                                framewroks like React and Vue!
+                                </br>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="projects-wrap" id="projects-wrap">
+            <!-- <div class="projects-wrap" id="projects-wrap">
                 <div class="projects">
                     <div class="pros-head fade">
                         <h2>Projects</h2>
@@ -102,36 +191,39 @@
                         <a class="project" href=""></a>
                     </div>
                 </div>
-            </div>
-            <div class="contact-wrap" id="contact-wrap">
-                <h2 class="fade">Contact ME</h2>
+            </div> -->
+            <div class="contact-wrap fade" id="contact-wrap">
+                <h2>Contact Me</h2>
                 <div class="contact">
-                    <form class="form fade2 flex-col">
+                    <form id="form" class="form fade2 flex-col">
                         <div class="form-div">
                             <div class="flex-row">
-                                <h3>Instant message</h3>
+                                <h3>Send a message</h3>
                             </div>
-                            <input type="input" placeholder="Full name">
-                            <input type="input" placeholder="Email">
-                            <input type="input" placeholder="Subject">
-                            <textarea placeholder="Message" style="height: 15vh;"></textarea>
-                            <button class="btn">Submit</button>
+                            <input id="name" type="text" placeholder="Name" required />
+                            <input id="email" type="email" placeholder="Email" required />
+                            <input id="subject" type="text" placeholder="Subject" required />
+                            <textarea id="message" placeholder="Message" style="height: 15vh;" required></textarea>
+                            <input class="btn" type="submit" />
                         </div>
                     </form>
-                    <div class="form2 flex-row fade2">
-                        <a>FB</a>
-                        <a>Ins</a>
-                        <a>Tw</a>
+                    <div class="links form2 flex-row fade2">
+                        <a href="https://www.facebook.com/Juragat02/"><img class="icon" src="fb.png"></a>
+                        <a href="https://www.youtube.com/@monotheistAli"><img class="icon" src="yt.png"></a>
+                        <a href="https://twitter.com/JuragatA"><img class="icon" src="tw.png"></a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <p><span class="grnTxt">&copy; 2023 Juragat </span>| All Rights Reserved.</p>
+        <div class="foot2">
+            <p><span class="blkTxt">&copy; 2023 Juragat</span><span class="whiteTxt"> | All Rights Reserved.</span></p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
