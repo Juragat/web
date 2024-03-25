@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(widt)
     document.querySelector('.handler').style.width = widt + 'px';
     document.querySelector('.handler').style.height = heit + 'px';
+
     var heit2 = document.querySelector('.navWrap').offsetHeight;
     document.querySelector('.navRes').style.top = heit2 + 'px';
 });
@@ -45,20 +46,24 @@ function slideInContent() {
 
 document.querySelector('.handler').addEventListener('mouseover', showUp);
 document.querySelector('.handler').addEventListener('mouseout', disappear);
+
 function showUp() {
-    var c = 45;
+    var top = document.querySelector('.h1-1st').offsetTop;
+    var height = document.querySelector('.h1-1st').offsetHeight;
     document.querySelector('.grnTxt').style.opacity = '0';
+    document.querySelector('.txtBtn').style.opacity = '0';
     document.querySelectorAll('.swap').forEach(el => {
-        c = c + 10;
-        el.style.top = c.toString() + "%";
+        top = top + height;
+        el.style.top = top.toString() + "px";
         el.style.opacity = '1';
     })
 }
 function disappear() {
-    var c = 45;
+    var top = document.querySelector('.h1-1st').offsetTop;
     document.querySelector('.grnTxt').style.opacity = '1';
+    document.querySelector('.txtBtn').style.opacity = '1';
     document.querySelectorAll('.swap').forEach(el => {
-        el.style.top = c.toString() + "%";
+        el.style.top = top.toString() + "px";
         el.style.opacity = '0';
     })
 }
@@ -98,18 +103,19 @@ mq.addListener(handleScreenWidthChange);
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        const topOffset = targetSection.offsetTop;
-        const scrollDuration = 750; // Duration of the scroll animation in milliseconds
-
-        smoothScrollTo(topOffset, scrollDuration);
-    });
+    anchor.addEventListener('click',  func);
 });
+document.querySelector('.a').addEventListener('click',  func);
+function func(e) {
+    e.preventDefault();
 
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    const topOffset = targetSection.offsetTop;
+    const scrollDuration = 750; // Duration of the scroll animation in milliseconds
+
+    smoothScrollTo(topOffset, scrollDuration);
+}
 // Smooth scrolling function
 function smoothScrollTo(target, duration) {
     const start = window.pageYOffset;
@@ -133,3 +139,28 @@ function smoothScrollTo(target, duration) {
 
     scroll();
 }
+
+const form = document.getElementById("form");
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+    var body = "Email: " + email + "<br>Name: " + name + "<br>Subject: " + subject + "<br>Message: " + message;
+    Email.send({
+        SecureToken: "fe7792dd-9d1d-4ea5-ac7a-72e442ee465e",
+        To: 'juragatarman@gmail.com',
+        From: "business@juragat.com",
+        Subject: "Client message from juragat.com",
+        Body: body
+    }).then(
+        message => alert('Email is sent'),
+    );
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('message').value = '';
+})
