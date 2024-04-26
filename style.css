@@ -13,7 +13,8 @@ h2,
 h3,
 h4,
 h5,
-p {
+p
+ {
     background: linear-gradient(to right, #00ff26, #00ccff, #bfff00);
     -webkit-background-clip: text;
     background-clip: text;
@@ -60,7 +61,7 @@ header {
 .grnTxt {
     color: rgb(91, 203, 255);
     z-index: -5;
-    transition-duration: 0.5s;
+    transition-duration: 0.5;
     font-size: 1rem;
 }
 .blkTxt {
@@ -124,7 +125,7 @@ nav a.active {
 
 .text {
     width: 65%;
-
+    
 }
 
 .text>* {
@@ -136,8 +137,8 @@ nav a.active {
 
 .handler {
     z-index: 1;
+    position: relative;
 }
-
 .h1-2nd {
     top: 45%;
     opacity: 0;
@@ -172,7 +173,7 @@ nav a.active {
 }
 
 .txtBot {
-    top: 60%;
+    top: 65%;
     display: flex;
     align-items: center;
 }
@@ -444,20 +445,19 @@ textarea:focus {
 footer {
     position: relative;
     height: 65vh;
-    text-transform: uppercase;
     font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
+    font-family: Arial, sans-serif;
+    font-weight: 300;
     padding: 0;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
+    background-color: black
 }
 
 .foot2{
-    height: 50vh;
-    background-color: black;
-    width: 100%;
+    margin: 0;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -518,33 +518,34 @@ footer {
     }
 
     h1 {
-        font-size: 50px;
+        font-size: 45px;
     }
-
+    
     header {
-        height: 150vh;
+        min-height: 180vh;
     }
 
     .intro {
         position: relative;
         flex-direction: column;
-        height: 150vh;
+        min-height: 180vh;
         padding: 0;
     }
 
     .text {
+        top:0;
         position: relative;
         width: 100%;
-        height: 100vh;        
+        min-height: 100vh;
     }
 
     .text>* {
-        top: 40vh;
+        top: 35vh;
     }
 
     .txtBot {
+        position: relative;
         width: 100%;
-        top: 55vh;
         flex-direction: column;
         align-items: start;
     }
@@ -553,16 +554,22 @@ footer {
     .txtBot button{
         width: 100%;
     }
+    .txtBot button{
+        margin:0;
+    }
 
     .photo {
         position: relative;
         width: 100%;
-        height: 50vh;
+        min-height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+    .front{
+        min-height: 80vh;
+        width: 100vh;
+    }
     .about {
         width: auto;
     }
@@ -599,7 +606,6 @@ footer {
         transition-duration: 0.3s;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
-
     .contact {
         flex-direction: column;
     }
@@ -611,6 +617,9 @@ footer {
     textarea{
         width: 80%;
         height: 5vh;
+    }
+    footer{
+        height: 25vh;
     }
 
 }
