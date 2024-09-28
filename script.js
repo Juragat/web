@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
         showUp();
     }, 500);
+    
     setTimeout(function () {
         disappear();
     }, 3500);
@@ -105,7 +106,7 @@ function handleScreenWidthChange(mq) {
 }
 
 // Media query for screen width wider than 900px
-var mq = window.matchMedia("(min-width: 901px)");
+var mq = window.matchMedia("(min-width: 1025px)");
 
 // Call the function initially to check the screen width
 handleScreenWidthChange(mq);
