@@ -7,14 +7,15 @@ body {
     margin: 0;
     background: black;
 }
-
+a{
+    text-decoration: none;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
-p
- {
+p {
     background: linear-gradient(to right, #00ff26, #00ccff, #bfff00);
     -webkit-background-clip: text;
     background-clip: text;
@@ -61,7 +62,7 @@ header {
 .grnTxt {
     color: rgb(91, 203, 255);
     z-index: -5;
-    transition-duration: 0.5;
+    transition-duration: 0.5s;
     font-size: 1rem;
 }
 .blkTxt {
@@ -125,7 +126,6 @@ nav a.active {
 
 .text {
     width: 65%;
-    
 }
 
 .text>* {
@@ -137,8 +137,8 @@ nav a.active {
 
 .handler {
     z-index: 1;
-    position: relative;
 }
+
 .h1-2nd {
     top: 45%;
     opacity: 0;
@@ -173,7 +173,7 @@ nav a.active {
 }
 
 .txtBot {
-    top: 65%;
+    top: 60%;
     display: flex;
     align-items: center;
 }
@@ -314,16 +314,31 @@ nav a.active {
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    min-height: 65vh;
 }
 
 .project {
     width: 45vh;
     height: 45vh;
     margin: 1vh;
-    background-color: #04AA6D;
     border: solid 0px;
     border-radius: 2.5vh;
     transition-duration: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.daraseaPro{
+    background-image: url('darasea.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.csPro{
+    background: linear-gradient(to right, #00ff26, #00ccff, #bfff00);
+    background-size: 300%;
+    background-position: -100%;
+    animation: change-color 3s infinite alternate-reverse;
 }
 
 .project:hover {
@@ -333,7 +348,19 @@ nav a.active {
     transition-duration: 0.3s;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+.project p{
+    text-shadow: 1px 1px 1px #000000;
+    transition-duration: 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+.project:hover p{
+    font-size: large;
+    transition-duration: 0.3s;
+    text-shadow: 4px 4px 4px #000000;
 
+}
 .contact {
     width: 60vw;
     height: 60%;
@@ -474,9 +501,9 @@ footer {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1025px) {
     body {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     .avatar{
         top: 0;
@@ -518,34 +545,33 @@ footer {
     }
 
     h1 {
-        font-size: 45px;
+        font-size: 50px;
     }
-    
+
     header {
-        min-height: 180vh;
+        height: 150vh;
     }
 
     .intro {
         position: relative;
         flex-direction: column;
-        min-height: 180vh;
+        height: 150vh;
         padding: 0;
     }
 
     .text {
-        top:0;
         position: relative;
         width: 100%;
-        min-height: 100vh;
+        height: 100vh;        
     }
 
     .text>* {
-        top: 35vh;
+        top: 40vh;
     }
 
     .txtBot {
-        position: relative;
         width: 100%;
+        top: 60vh;
         flex-direction: column;
         align-items: start;
     }
@@ -554,22 +580,16 @@ footer {
     .txtBot button{
         width: 100%;
     }
-    .txtBot button{
-        margin:0;
-    }
 
     .photo {
         position: relative;
         width: 100%;
-        min-height: 80vh;
+        height: 50vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .front{
-        min-height: 80vh;
-        width: 100vh;
-    }
+
     .about {
         width: auto;
     }
@@ -606,6 +626,7 @@ footer {
         transition-duration: 0.3s;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
+
     .contact {
         flex-direction: column;
     }
@@ -618,13 +639,10 @@ footer {
         width: 80%;
         height: 5vh;
     }
-    footer{
-        height: 25vh;
-    }
 
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1025px) {
     .navBtn {
         display: none;
     }
