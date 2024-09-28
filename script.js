@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     slideInContent();
-    showUp();
+    setTimeout(function () {
+        showUp();
+    }, 500);
     setTimeout(function () {
         disappear();
-    }, 2000);
+    }, 3500);
     var widt = document.querySelector('.h1-1st').offsetWidth;
     var heit = document.querySelector('.h1-1st').offsetHeight;
     console.log(widt)
@@ -52,10 +54,20 @@ function showUp() {
     var height = document.querySelector('.h1-1st').offsetHeight;
     document.querySelector('.grnTxt').style.opacity = '0';
     document.querySelector('.txtBtn').style.opacity = '0';
+    var tmp = 0;
     document.querySelectorAll('.swap').forEach(el => {
-        top = top + height;
-        el.style.top = top.toString() + "px";
-        el.style.opacity = '1';
+        if(tmp==0){
+            top = top + height;
+            el.style.top = top.toString() + "px";
+            el.style.opacity = '1';
+        };
+        if(tmp==1){
+            var height2 = document.querySelector('.h1-2nd').offsetHeight;
+            top = top + height2;
+            el.style.top = top.toString() + "px";
+            el.style.opacity = '1';
+        };
+        tmp=1;
     })
 }
 function disappear() {
