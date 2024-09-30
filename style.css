@@ -49,12 +49,14 @@ footer,
     justify-content: center;
     height: 100vh;
 }
-
+.contact-wrap{
+    justify-content: end;
+    height: 80vh;
+}
 header {
     justify-content: start;
     min-height: 100vh;
 }
-
 
 .whiteTxt{
     color: white;
@@ -471,7 +473,7 @@ textarea:focus {
 }
 footer {
     position: relative;
-    height: 65vh;
+    height: 33vh;
     font-size: 1.2rem;
     font-family: Arial, sans-serif;
     font-weight: 300;
@@ -638,6 +640,9 @@ footer {
     textarea{
         width: 80%;
         height: 5vh;
+    }
+    footer{
+        height: 25vh;
     }
 
 }
