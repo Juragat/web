@@ -50,7 +50,6 @@ footer,
     height: 100vh;
 }
 .contact-wrap{
-    justify-content: end;
     height: 80vh;
 }
 header {
@@ -473,7 +472,7 @@ textarea:focus {
 }
 footer {
     position: relative;
-    height: 33vh;
+    height: 20vh;
     font-size: 1.2rem;
     font-family: Arial, sans-serif;
     font-weight: 300;
@@ -640,9 +639,6 @@ footer {
     textarea{
         width: 80%;
         height: 5vh;
-    }
-    footer{
-        height: 25vh;
     }
 
 }
